@@ -40,6 +40,7 @@ public class TestGUI {
 
         testGUI.createLabels();
         testGUI.createTextFields();
+        testGUI.createButtons();
 
     }
 
@@ -55,5 +56,12 @@ public class TestGUI {
         jtxtResult = new MyJTextField(15, Color.RED);
         jtxtResult.setEditable(false);
         jtxtResult.setFocusable(false);
+    }
+
+    private void createButtons(){
+        btnAdd = new MyJButton("Сложение");
+        btnSubstract = new MyJButton("Вычитание");
+        btnDivide = new MyJButton("Деление");
+        btnMultiply = new MyJButton("Умножение");
     }
 }
