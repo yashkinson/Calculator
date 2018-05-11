@@ -15,4 +15,8 @@ public class MyJFrame extends JFrame {
         this(title, width, height);
         super.getContentPane().add(component);
     }
+    public MyJFrame(String title, int width, int height, LayoutManager layoutManager){
+        this(title, width, height);
+        super.setLayout(layoutManager);
+    }
 }
