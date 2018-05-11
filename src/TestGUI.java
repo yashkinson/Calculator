@@ -39,6 +39,7 @@ public class TestGUI {
         TestGUI testGUI = new TestGUI();
 
         testGUI.createLabels();
+        testGUI.createTextFields();
 
     }
 
@@ -46,5 +47,13 @@ public class TestGUI {
         labelNumberOne = new JLabel("Число 1");
         labelNumberTwo = new JLabel("Число 2");
         lableResult = new JLabel("Результат");
+    }
+
+    private void createTextFields(){
+        jtxtNumberOne = new MyJTextField(10);
+        jtxtNumberTwo = new MyJTextField(10);
+        jtxtResult = new MyJTextField(15, Color.RED);
+        jtxtResult.setEditable(false);
+        jtxtResult.setFocusable(false);
     }
 }
