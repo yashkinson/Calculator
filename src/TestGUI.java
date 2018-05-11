@@ -41,6 +41,7 @@ public class TestGUI {
         testGUI.createLabels();
         testGUI.createTextFields();
         testGUI.createButtons();
+        testGUI.createPanels();
 
     }
 
@@ -63,5 +64,32 @@ public class TestGUI {
         btnSubstract = new MyJButton("Вычитание");
         btnDivide = new MyJButton("Деление");
         btnMultiply = new MyJButton("Умножение");
+    }
+
+    private void createPanels(){
+        panelTop = new MyJPanel("panel1", 100, 100);
+        panelTop.setPreferredSize(new Dimension(200, 50));
+        panelTop.setLayout(new FlowLayout(FlowLayout.LEFT));
+
+        panelMid = new MyJPanel("panel2", 100, 100);
+        panelMid.setPreferredSize(new Dimension(200, 50));
+        panelMid.setLayout(new FlowLayout(FlowLayout.LEFT));
+
+        panelDown = new MyJPanel("panel3", 100, 100);
+        panelDown.setPreferredSize(new Dimension(200, 50));
+        panelDown.setLayout(new FlowLayout(FlowLayout.LEFT));
+
+        panelTop.add(labelNumberOne);
+        panelTop.add(jtxtNumberOne);
+        panelTop.add(labelNumberTwo);
+        panelTop.add(jtxtNumberTwo);
+
+        panelMid.add(btnAdd);
+        panelMid.add(btnSubstract);
+        panelMid.add(btnMultiply);
+        panelMid.add(btnDivide);
+
+        panelDown.add(lableResult);
+        panelDown.add(jtxtResult);
     }
 }
