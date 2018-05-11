@@ -42,6 +42,7 @@ public class TestGUI {
         testGUI.createTextFields();
         testGUI.createButtons();
         testGUI.createPanels();
+        testGUI.createFrame();
 
     }
 
@@ -92,4 +93,18 @@ public class TestGUI {
         panelDown.add(lableResult);
         panelDown.add(jtxtResult);
     }
+
+    private void createFrame(){
+        frame = new MyJFrame("Calculator", 430, 200, new BorderLayout(2,2));
+        frame.setMinimumSize(new Dimension(430, 200));
+
+        frame.setResizable(false);
+
+        frame.getContentPane().add(panelTop, BorderLayout.NORTH);
+        frame.getContentPane().add(panelMid, BorderLayout.CENTER);
+        frame.getContentPane().add(panelDown, BorderLayout.SOUTH);
+
+        frame.setVisible(true);
+    }
+
 }
