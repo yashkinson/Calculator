@@ -60,6 +60,7 @@ public class TestGUI {
         jtxtResult = new MyJTextField(15, Color.RED);
         jtxtResult.setEditable(false);
         jtxtResult.setFocusable(false);
+        addTextFieldListener();
     }
 
     private void createButtons(){
@@ -118,6 +119,11 @@ public class TestGUI {
         btnDivide.addActionListener(butLis);
         btnMultiply.addActionListener(butLis);
         btnSubstract.addActionListener(butLis);
+    }
+
+    private void addTextFieldListener(){
+        jtxtNumberOne.addFocusListener(new CalcTextFieldActionListener(jtxtNumberOne));
+        jtxtNumberTwo.addFocusListener(new CalcTextFieldActionListener(jtxtNumberTwo));
     }
 
 }
