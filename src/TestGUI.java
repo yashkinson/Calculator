@@ -3,6 +3,8 @@ import java.awt.*;
 
 public class TestGUI {
 
+    public static final String INPUT_CHISLO = "Введите число";
+
     private MyJButton btnAdd;
     private MyJButton btnSubstract;
     private MyJButton btnDivide;
@@ -65,6 +67,8 @@ public class TestGUI {
         btnSubstract = new MyJButton("Вычитание");
         btnDivide = new MyJButton("Деление");
         btnMultiply = new MyJButton("Умножение");
+
+        addButtonListener();
     }
 
     private void createPanels(){
@@ -105,6 +109,15 @@ public class TestGUI {
         frame.getContentPane().add(panelDown, BorderLayout.SOUTH);
 
         frame.setVisible(true);
+    }
+
+    private void addButtonListener(){
+        CalcButtonActionListener butLis = new CalcButtonActionListener(jtxtNumberOne, jtxtNumberTwo, jtxtResult);
+
+        btnAdd.addActionListener(butLis);
+        btnDivide.addActionListener(butLis);
+        btnMultiply.addActionListener(butLis);
+        btnSubstract.addActionListener(butLis);
     }
 
 }
